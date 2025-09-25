@@ -25,13 +25,12 @@ public class Item : MonoBehaviour
         textName = texts[1];
         textDesc = texts[2];
         textName.text = data.itemName;
-        Debug.Log("textDesc = " + textDesc.name);
     }
 
     void OnEnable()
     {
         textLevel.text = "Lv." + (level + 1);
-        Debug.Log("textDesc = " + textDesc.name);
+
         switch (data.itemType)
         {
             case ItemData.ItemType.Melee:
