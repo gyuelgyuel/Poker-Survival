@@ -78,4 +78,9 @@ public class Player : MonoBehaviour
             GameManager.instance.GameOver();
         }
     }
+
+    void OnMove(InputValue value)
+    {
+        inputVec = value.Get<Vector2>();
+    }
 }
