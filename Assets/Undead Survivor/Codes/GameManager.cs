@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float health;
     public float maxHealth = 100;
     public int level;
+    public int chipCount = 10000;
     public int kill;
     public int exp;
     public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
@@ -134,5 +135,17 @@ public class GameManager : MonoBehaviour
         isLive = true;
         Time.timeScale = 1;
         uiJoy.localScale = Vector3.one;
+    }
+
+    public void SpendChip(int count)
+    {
+        if (chipCount >= count)
+        {
+            chipCount -= count;
+        }
+        else
+        {
+            ShopUIManager.instance.ShowNotEnoughChips();
+        }
     }
 }

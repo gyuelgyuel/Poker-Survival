@@ -6,11 +6,30 @@ using UnityEngine.InputSystem;
 public class NPC : MonoBehaviour
 {
     public GameObject shopUI;
-    private bool isPlayerNear = false;
+    public bool isPlayerNear = false;
 
-    
+
+    void Start()
+    {
+        Transform npcKey = transform.Find("NPCKey");
+        npcKey.gameObject.SetActive(false);
+    }
+
     void Update()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (!player)
+            return;
+        Transform npcKey = transform.Find("NPCKey");
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        
+        if (distance < 2f)
+            isPlayerNear = true;
+        else
+            isPlayerNear = false;
+
+        npcKey.gameObject.SetActive(isPlayerNear);
+
         if (isPlayerNear && Input.GetKeyDown(KeyCode.G))
         {
             ToggleShop();
@@ -22,19 +41,9 @@ public class NPC : MonoBehaviour
     {
         shopUI.SetActive(!shopUI.activeSelf);
         Time.timeScale = shopUI.activeSelf ? 0f : 1f;
-    }
-    
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        if(shopUI.activeSelf)
         {
-            isPlayerNear = true;
+            ShopUIManager.instance.UpdateUI();
         }
-    }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-            isPlayerNear = false;
     }
 }

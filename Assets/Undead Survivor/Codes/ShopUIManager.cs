@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class ShopUIManager : MonoBehaviour
 {
     //public PlayerData playerData;
     //public Text playerGoldText;
+    public static ShopUIManager instance;
+    public GameObject shopUI;
+    public GameObject notEnoughChipPanel;
+    public Text ChipCounts, cardpack1text, cardpack2text,cardpack4text;
 
     [Header("Card Pack Buttons")]
     public Button pack1Button;
@@ -14,7 +19,12 @@ public class ShopUIManager : MonoBehaviour
     [Header("Card Pack Prices")]
     public int pack1Price = 100;
     public int pack2Price = 200;
-    public int pack4Price = 400;
+    public int pack4Price = 4000;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -22,8 +32,6 @@ public class ShopUIManager : MonoBehaviour
         pack1Button.onClick.AddListener(() => BuyPack(1));
         pack2Button.onClick.AddListener(() => BuyPack(2));
         pack4Button.onClick.AddListener(() => BuyPack(4));
-
-        //UpdateUI();
     }
 
     void Update()
@@ -40,27 +48,14 @@ public class ShopUIManager : MonoBehaviour
     // 카드팩 구매 처리
     void BuyPack(int packCount)
     {
-        Debug.Log($"카드팩 {packCount}구매");
-        /*
-        int price = GetPrice(packCount);
+        if (!shopUI.activeSelf)
+            return;
 
-        if (playerData.SpendGold(price))
-        {
-            // 카드팩 지급
-            CardPackManager.Instance.GivePack(playerData, packCount);
-
-            // 재화 사용 정보 전달 가능 (다른 스크립트에서 PlayerData 참조)
-            Debug.Log($"✅ 카드팩 {packCount}개 구매 완료! 소비 골드: {price}");
-
-            UpdateUI();
-        }
-        else
-        {
-            Debug.Log("❌ 골드가 부족합니다.");
-        }
-        */
+        int ItemPrice = GetPrice(packCount);
+        GameManager.instance.SpendChip(ItemPrice);
+        UpdateUI();
     }
-    /*
+    
     int GetPrice(int packCount)
     {
         switch (packCount)
@@ -72,9 +67,45 @@ public class ShopUIManager : MonoBehaviour
         }
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
-        playerGoldText.text = $"Gold: {playerData.gold}";
+        // 칩개수 변경
+        GameObject chipObj = GameObject.Find("ChipCounts");
+        ChipCounts = chipObj.GetComponent<Text>();
+        ChipCounts.text = $"Chips : {GameManager.instance.chipCount}";
+
+        // 카드팩 설명 변경
+        GameObject cardpack1 = GameObject.Find("cardpack1text");
+        GameObject cardpack2 = GameObject.Find("cardpack2text");
+        GameObject cardpack4 = GameObject.Find("cardpack4text");
+        GameObject[] cardpacklists = { cardpack1, cardpack2, cardpack4 };
+        for (int i = 0; i < cardpacklists.Length; i++)
+        {
+            Text textobj = cardpacklists[i].GetComponent<Text>();
+            int packCount = (i == 0) ? 1 : (i == 1) ? 2 : 4;
+            textobj.text = $"카드팩\n{packCount}개\n필요칩 : {GetPrice(packCount)}";
+        }
     }
-    */
+    
+
+    public void ShowNotEnoughChips()
+    {
+        if (!notEnoughChipPanel)
+            return;
+
+        notEnoughChipPanel.SetActive(true);
+        StopAllCoroutines(); // 중복 호출 방지
+        StartCoroutine(HideAfterDelay());
+    }
+
+    public void HideNotEnoughChip()
+    {
+        notEnoughChipPanel.SetActive(false);
+    }
+
+    private IEnumerator HideAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        notEnoughChipPanel.SetActive(false);
+    }
 }
