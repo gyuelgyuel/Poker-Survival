@@ -1,34 +1,58 @@
-using System.Collections;                  // IEnumerator, Coroutine
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardHandDrawer : MonoBehaviour
+public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
 {
     [Header("Deck / Sprites")]
-    public List<Sprite> deck;               // 덱: 앞면 스프라이트들
-    public Sprite backSprite;               // 기본 뒷면 스프라이트
+    public List<Sprite> deck;
+    public Sprite backSprite;
 
-    [Header("Runtime (손패)")]
-    public Sprite[] slots = new Sprite[5];  // 현재 뽑힌 앞면들 (최대 5장)
+    [Header("Layout Settings")]
+    public Vector2 cardSize = new Vector2(200, 280);
+    public int handSize = 5;
+
+    [Header("Flip Animation")]
+    public float flipDuration = 0.25f;   // 뒤집기 총 시간(초)
+
+    [Header("Runtime")]
+    public Sprite[] slots = new Sprite[5];
     public int slotIndex = 0;
 
-    [Header("Flip Settings")]
-    public float flipDuration = 0.25f;      // 뒤집기 시간(초)
+    private RectTransform container;
 
-    // CardContainer의 직계 자식 Image들 (Card1~Card5)
-    private Image[] childImages;
+    // 시각 레이어
+    private Image[] backImages;
+    private Image[] frontImages;
+    private CanvasGroup[] backGroups;
+    private CanvasGroup[] frontGroups;
 
-    // 이번 핸드에서 아직 안 뽑힌 deck 인덱스들(셔플됨)
+    // 3D 회전용 Pivot (슬롯 내부에 생성)
+    private RectTransform[] flipPivots;
+
+    // 뽑기 풀/상태
     private List<int> handPool;
+    private bool[] isFlipping;
 
     void Awake()
     {
-        AutoBindDirectChildImages();
-        if (slots == null || slots.Length < 5) slots = new Sprite[5];
+        container = (RectTransform)transform;
 
-        // 시작 시 화면을 모두 뒷면으로 초기화
-        InitBacks();
+        int slotCount = Mathf.Min(handSize, transform.childCount);
+        if (slotCount < handSize)
+            Debug.LogWarning($"슬롯 {handSize}개 필요하지만 {slotCount}개만 존재합니다.");
+
+        backImages  = new Image[slotCount];
+        frontImages = new Image[slotCount];
+        backGroups  = new CanvasGroup[slotCount];
+        frontGroups = new CanvasGroup[slotCount];
+        flipPivots  = new RectTransform[slotCount];
+        isFlipping  = new bool[slotCount];
+
+        EnsureFixedLayoutForChildren(slotCount);
+        BuildOrBindVisualLayers(slotCount);
+        InitBacks(slotCount);
 
         if (deck != null && deck.Count > 0)
             BeginHand();
@@ -36,166 +60,212 @@ public class CardHandDrawer : MonoBehaviour
 
     void Update()
     {
-        // R: 한 장 뽑고, 그 슬롯만 뒷면 -> 앞면으로 뒤집기
         if (Input.GetKeyDown(KeyCode.R))
         {
-            int justFilled = DrawRandomCardNoDuplicate_FromPool(); // 방금 채워진 슬롯 인덱스
-            if (justFilled >= 0 && justFilled < childImages.Length)
+            int idx = DrawRandomCardNoDuplicate_FromPool();
+            if (idx >= 0 && idx < frontImages.Length)
             {
-                var img = childImages[justFilled];
-                var front = slots[justFilled];
-                if (img != null && front != null)
-                {
-                    // 뒷면에서 앞면으로 플립
-                    StartCoroutine(FlipToFront(img, front, flipDuration));
-                }
+                frontImages[idx].sprite = slots[idx];               // 앞면 설정
+                StartCoroutine(FlipToFront3D(idx, flipDuration));   // ★ 3D 뒤집기
             }
         }
 
-        // N: 새 핸드 시작(모두 뒷면으로 되돌리고 풀 셔플)
         if (Input.GetKeyDown(KeyCode.N))
         {
             BeginHand();
-            InitBacks();
+            InitBacks(frontImages.Length);
         }
     }
 
-    /// CardContainer의 "직계 자식" Image만 수집
-    void AutoBindDirectChildImages()
+    // ── 레이아웃 고정: 슬롯 크기를 LayoutElement로 못 박기 ───────────────
+    void EnsureFixedLayoutForChildren(int count)
     {
-        var list = new List<Image>();
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < count; i++)
         {
-            var child = transform.GetChild(i);
-            var img = child.GetComponent<Image>();
-            if (img != null) list.Add(img);
+            var slot = (RectTransform)transform.GetChild(i);
+            var le = slot.GetComponent<LayoutElement>();
+            if (!le) le = slot.gameObject.AddComponent<LayoutElement>();
+            le.minWidth = le.preferredWidth = cardSize.x;
+            le.minHeight = le.preferredHeight = cardSize.y;
+            le.flexibleWidth = le.flexibleHeight = 0f;
+
+            var rootImg = slot.GetComponent<Image>();
+            if (rootImg) rootImg.enabled = false; // 시각은 하위 레이어가 담당
         }
-        childImages = list.ToArray();
     }
 
-    /// 화면을 전부 뒷면으로 초기화
-    void InitBacks()
+    // ── FlipPivot + Back/Front 레이어 구축 ──────────────────────────────
+    void BuildOrBindVisualLayers(int count)
     {
-        if (childImages == null) return;
-        foreach (var img in childImages)
+        for (int i = 0; i < count; i++)
         {
-            if (img == null) continue;
-            img.enabled = true;           // 비활성화로 "사라지는" 문제 방지
-            img.sprite = backSprite;      // 기본은 항상 뒷면
-            img.rectTransform.localScale = Vector3.one; // 플립 스케일 초기화
+            var slot = (RectTransform)transform.GetChild(i);
+
+            // FlipPivot (슬롯 안에서만 회전/애니메이션)
+            Transform pivotT = slot.Find("FlipPivot");
+            if (!pivotT)
+            {
+                var go = new GameObject("FlipPivot", typeof(RectTransform));
+                pivotT = go.transform;
+                SetupFullStretch((RectTransform)pivotT);
+                pivotT.SetParent(slot, false);
+            }
+            var pivot = (RectTransform)pivotT;
+            pivot.localRotation = Quaternion.identity;
+            pivot.localScale = Vector3.one;
+            flipPivots[i] = pivot;
+
+            // Back
+            Transform backT = pivot.Find("Back");
+            if (!backT)
+            {
+                var go = new GameObject("Back", typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
+                backT = go.transform;
+                SetupFullStretch((RectTransform)backT);
+                backT.SetParent(pivot, false);
+            }
+            var backImg = backT.GetComponent<Image>();
+            var backCg  = backT.GetComponent<CanvasGroup>();
+            backImg.preserveAspect = true;
+            backImg.sprite = backSprite;
+            backCg.alpha = 1f;
+            backCg.interactable = backCg.blocksRaycasts = false;
+
+            // Front
+            Transform frontT = pivot.Find("Front");
+            if (!frontT)
+            {
+                var go = new GameObject("Front", typeof(RectTransform), typeof(Image), typeof(CanvasGroup));
+                frontT = go.transform;
+                SetupFullStretch((RectTransform)frontT);
+                frontT.SetParent(pivot, false);
+            }
+            var frontImg = frontT.GetComponent<Image>();
+            var frontCg  = frontT.GetComponent<CanvasGroup>();
+            frontImg.preserveAspect = true;
+            frontImg.sprite = null;
+            frontCg.alpha = 0f;
+            frontCg.interactable = frontCg.blocksRaycasts = false;
+
+            backImages[i]  = backImg;
+            frontImages[i] = frontImg;
+            backGroups[i]  = backCg;
+            frontGroups[i] = frontCg;
         }
     }
 
-    /// 새 핸드 시작: 인덱스 풀 생성/셔플 + 손패/인덱스 초기화
+    void SetupFullStretch(RectTransform rt)
+    {
+        rt.anchorMin = Vector2.zero;
+        rt.anchorMax = Vector2.one;
+        rt.offsetMin = Vector2.zero;
+        rt.offsetMax = Vector2.zero;
+    }
+
+    void InitBacks(int count)
+    {
+        slotIndex = 0;
+        if (slots == null || slots.Length < handSize) slots = new Sprite[handSize];
+        System.Array.Clear(slots, 0, slots.Length);
+
+        for (int i = 0; i < count; i++)
+        {
+            if (backImages[i])  backImages[i].sprite  = backSprite;
+            if (frontImages[i]) frontImages[i].sprite = null;
+            if (backGroups[i])  backGroups[i].alpha  = 1f;
+            if (frontGroups[i]) frontGroups[i].alpha = 0f;
+            if (flipPivots[i])  flipPivots[i].localRotation = Quaternion.identity;
+            isFlipping[i] = false;
+        }
+    }
+
+    // ── 뽑기 로직(중복X) ────────────────────────────────────────────────
     void BeginHand()
     {
         if (deck == null || deck.Count == 0)
         {
             Debug.LogWarning("Deck이 비었습니다.");
             handPool = null;
-            slotIndex = 0;
-            System.Array.Clear(slots, 0, slots.Length);
             return;
         }
 
-        // 인덱스 풀 생성
         handPool = new List<int>(deck.Count);
         for (int i = 0; i < deck.Count; i++) handPool.Add(i);
 
-        // Fisher–Yates 셔플
         for (int i = handPool.Count - 1; i > 0; i--)
         {
-            int j = Random.Range(0, i + 1); // [0, i]
+            int j = Random.Range(0, i + 1);
             (handPool[i], handPool[j]) = (handPool[j], handPool[i]);
         }
-
-        // 손패 초기화
-        slotIndex = 0;
-        System.Array.Clear(slots, 0, slots.Length);
-
-        Debug.Log("새 핸드를 시작했습니다. (N 키로 수동 초기화 가능)");
     }
 
-    /// deck에서 한 장을 뽑아 slots에 채움(중복 없음). 성공 시 "방금 채워진 슬롯 인덱스" 반환, 실패 시 -1
-    public int DrawRandomCardNoDuplicate_FromPool()
+    int DrawRandomCardNoDuplicate_FromPool()
     {
-        if (deck == null || deck.Count == 0)
-        {
-            Debug.LogWarning("Deck이 비었습니다.");
-            return -1;
-        }
+        if (deck == null || deck.Count == 0) { Debug.LogWarning("Deck이 비었습니다."); return -1; }
+
         if (handPool == null || handPool.Count == 0)
         {
-            // 풀 없음/소진 → 새 핸드
             BeginHand();
+            InitBacks(frontImages.Length);
             if (handPool == null || handPool.Count == 0) return -1;
-            // 새로 시작했으니 화면도 뒷면으로
-            InitBacks();
         }
 
-        int maxHand = Mathf.Min(5, deck.Count);
+        int maxHand = Mathf.Min(handSize, deck.Count);
         if (slotIndex >= maxHand)
         {
-            Debug.Log("손패가 가득 찼습니다. (N 키로 새 핸드를 시작하세요)");
+            Debug.Log("손패가 가득 찼습니다. (N으로 새 핸드를 시작하세요)");
             return -1;
         }
 
-        // 셔플된 풀의 마지막을 pop → 랜덤 효과
         int pick = handPool[handPool.Count - 1];
         handPool.RemoveAt(handPool.Count - 1);
 
-        int just = slotIndex;
+        int idx = slotIndex;
         slots[slotIndex++] = deck[pick];
-        return just;
+        return idx;
     }
 
-    /// 특정 Image를 뒷면→앞면으로 뒤집는 간단한 플립 코루틴
-    IEnumerator FlipToFront(Image img, Sprite front, float duration)
+    // ── 뒤집기 애니메이션: Pivot을 Y축으로 0→90°→0 회전 + 알파 교차 ─────────
+    IEnumerator FlipToFront3D(int slotIdx, float duration)
     {
-        if (img == null || front == null) yield break;
-        float half = Mathf.Max(0.0001f, duration * 0.5f);
-        var rt = img.rectTransform;
-        var baseScale = rt.localScale;
+        if (slotIdx < 0 || slotIdx >= isFlipping.Length) yield break;
+        if (isFlipping[slotIdx]) yield break;
 
-        // 1) 가로 스케일을 1 → 0 (뒷면 줄어듦)
+        var pivot = flipPivots[slotIdx];
+        var front = frontGroups[slotIdx];
+        var back  = backGroups[slotIdx];
+        if (!pivot || !front || !back) yield break;
+
+        isFlipping[slotIdx] = true;
+
+        float half = Mathf.Max(0.0001f, duration * 0.5f);
         float t = 0f;
+
+        // 1) 0° → 90° : 뒷면 보이던 면이 얇아지며 사라짐
         while (t < half)
         {
             t += Time.unscaledDeltaTime;
-            float s = Mathf.Lerp(1f, 0f, t / half);
-            rt.localScale = new Vector3(s, baseScale.y, baseScale.z);
+            float a = Mathf.Clamp01(t / half);
+            pivot.localRotation = Quaternion.Euler(0f, Mathf.Lerp(0f, 90f, a), 0f);
+            back.alpha  = 1f - a;   // 뒷면 서서히 사라짐
             yield return null;
         }
+        pivot.localRotation = Quaternion.Euler(0f, 90f, 0f);
+        back.alpha = 0f;
 
-        // 중간 시점에 앞면으로 스왑
-        img.sprite = front;
-
-        // 2) 가로 스케일을 0 → 1 (앞면 펼쳐짐)
+        // 2) 90° → 0° : 앞면이 나타남
         t = 0f;
         while (t < half)
         {
             t += Time.unscaledDeltaTime;
-            float s = Mathf.Lerp(0f, 1f, t / half);
-            rt.localScale = new Vector3(s, baseScale.y, baseScale.z);
+            float a = Mathf.Clamp01(t / half);
+            pivot.localRotation = Quaternion.Euler(0f, Mathf.Lerp(90f, 0f, a), 0f);
+            front.alpha = a;        // 앞면 서서히 나타남
             yield return null;
         }
+        pivot.localRotation = Quaternion.identity;
+        front.alpha = 1f;
 
-        rt.localScale = baseScale;
-    }
-
-    /// (선택) 전체 동기화가 필요할 때 사용: 미채워진 칸은 뒷면 유지
-    public void ApplySlotsToChildren()
-    {
-        if (childImages == null || childImages.Length == 0) return;
-
-        int count = Mathf.Min(5, Mathf.Min(slots?.Length ?? 0, childImages.Length));
-        for (int i = 0; i < count; i++)
-        {
-            var img = childImages[i];
-            if (img == null) continue;
-
-            img.enabled = true; // 항상 보이게
-            img.sprite = (slots[i] != null) ? slots[i] : backSprite;
-        }
+        isFlipping[slotIdx] = false;
     }
 }
