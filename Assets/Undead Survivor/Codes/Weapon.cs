@@ -37,12 +37,6 @@ public class Weapon : MonoBehaviour
                 }
                 break;
             }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            LevelUp(20, 5);
-        }
-
     }
 
     public void LevelUp(float damage, int count)
