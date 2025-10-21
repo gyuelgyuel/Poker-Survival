@@ -137,15 +137,17 @@ public class GameManager : MonoBehaviour
         uiJoy.localScale = Vector3.one;
     }
 
-    public void SpendChip(int count)
+    public bool SpendChip(int count)
     {
         if (chipCount >= count)
         {
             chipCount -= count;
+            return true;
         }
         else
         {
             ShopUIManager.instance.ShowNotEnoughChips();
+            return false;
         }
     }
 }

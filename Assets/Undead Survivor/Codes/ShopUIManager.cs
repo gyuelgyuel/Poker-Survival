@@ -1,6 +1,9 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ShopUIManager : MonoBehaviour
 {
@@ -9,7 +12,13 @@ public class ShopUIManager : MonoBehaviour
     public static ShopUIManager instance;
     public GameObject shopUI;
     public GameObject notEnoughChipPanel;
+    public GameObject packOpenUI;
     public Text ChipCounts, cardpack1text, cardpack2text,cardpack4text;
+    private List<string> tempOptions = new List<string>() {"111","222","333","444","555","666","777","888","999"};
+    private int optionAmount = 4;
+    private int remainPack = 0;
+    private int maxPack = 0;
+    public List<string> selectedOptions;
 
     [Header("Card Pack Buttons")]
     public Button pack1Button;
@@ -20,6 +29,14 @@ public class ShopUIManager : MonoBehaviour
     public int pack1Price = 100;
     public int pack2Price = 200;
     public int pack4Price = 4000;
+
+    [Header("Pack Option Select Buttons")]
+    public GameObject packOptionSelectButton1;
+    public GameObject packOptionSelectButton2;
+    public GameObject packOptionSelectButton3;
+    public GameObject packOptionSelectButton4;
+    public GameObject skipButton;
+    private GameObject[] packOptionSelectButtons;
 
     void Awake()
     {
@@ -32,6 +49,14 @@ public class ShopUIManager : MonoBehaviour
         pack1Button.onClick.AddListener(() => BuyPack(1));
         pack2Button.onClick.AddListener(() => BuyPack(2));
         pack4Button.onClick.AddListener(() => BuyPack(4));
+
+        packOptionSelectButtons = new GameObject[] { packOptionSelectButton1, packOptionSelectButton2, packOptionSelectButton3, packOptionSelectButton4 };
+        foreach (var option in packOptionSelectButtons)
+        {
+            var capturedOption = option; 
+            capturedOption.GetComponent<Button>().onClick.AddListener(() => SelectOption(capturedOption));
+        }
+        skipButton.GetComponent<Button>().onClick.AddListener(() => SelectOption(skipButton));
     }
 
     void Update()
@@ -43,6 +68,7 @@ public class ShopUIManager : MonoBehaviour
             BuyPack(2);
         if (Input.GetKeyDown(KeyCode.Alpha4))
             BuyPack(4);
+
     }
     
     // 카드팩 구매 처리
@@ -52,8 +78,14 @@ public class ShopUIManager : MonoBehaviour
             return;
 
         int ItemPrice = GetPrice(packCount);
-        GameManager.instance.SpendChip(ItemPrice);
-        UpdateUI();
+
+        if (GameManager.instance.SpendChip(ItemPrice)) {
+            remainPack = packCount;
+            maxPack = packCount;
+            UpdateUI();
+            PackOpen(remainPack);
+        }
+        
     }
     
     int GetPrice(int packCount)
@@ -108,4 +140,49 @@ public class ShopUIManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(1.5f);
         notEnoughChipPanel.SetActive(false);
     }
+
+    private void PackOpen(int packCount) {
+        if (remainPack == 0) {
+            packOpenUI.SetActive(false);
+            shopUI.SetActive(true);
+            return;
+        }
+        
+        if (!packOpenUI.activeSelf) { 
+            packOpenUI.SetActive(true); 
+            shopUI.SetActive(false);
+        }
+        packOpenUI.transform.GetChild(0).GetComponent<Text>().text = $"카드팩 개봉 ({maxPack-remainPack+1}/{maxPack})";
+        ShowPackOptions();
+    
+    }
+
+    private void ShowPackOptions() { 
+        List<int> options = new List<int>();
+        
+        for (int i = 0; i < optionAmount; i++) { 
+            int randomInt = Random.Range(0, tempOptions.Count - 1);
+            while (options.Contains(randomInt)) {
+                randomInt = Random.Range(0, tempOptions.Count - 1);
+            }
+            options.Add(randomInt);
+        }
+        for (int i = 0; i < packOptionSelectButtons.Length; i++) {
+            Text textobj = packOptionSelectButtons[i].transform.GetChild(1).GetComponent<Text>();
+            textobj.text = tempOptions[options[i]];
+        }
+
+    }
+
+    private void SelectOption(GameObject btn) {
+        if (btn.name != "SkipChoice") { selectedOptions.Add(btn.transform.GetChild(1).GetComponent<Text>().text); }
+        remainPack -= 1;
+        PackOpen(remainPack);
+
+    }
+
+
+
+
+
 }
