@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
 {
     [Header("Deck / Sprites")]
-    public List<Sprite> deck;
+    public List<CardData> deck;
     public Sprite backSprite;
 
     [Header("Layout Settings")]
@@ -74,6 +74,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
         {
             BeginHand();
             InitBacks(frontImages.Length);
+            WeaponSelectUIManager.instance.unsetAllCards();
         }
     }
 
@@ -221,7 +222,8 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
         handPool.RemoveAt(handPool.Count - 1);
 
         int idx = slotIndex;
-        slots[slotIndex++] = deck[pick];
+        slots[slotIndex++] = deck[pick].cardImage;
+        WeaponSelectUIManager.instance.setCard(idx, deck[pick]);
         return idx;
     }
 
