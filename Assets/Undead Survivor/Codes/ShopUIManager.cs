@@ -102,20 +102,15 @@ public class ShopUIManager : MonoBehaviour
     public void UpdateUI()
     {
         // 칩개수 변경
-        GameObject chipObj = GameObject.Find("ChipCounts");
-        ChipCounts = chipObj.GetComponent<Text>();
-        ChipCounts.text = $"Chips : {GameManager.instance.chipCount}";
+        if (ChipCounts)
+            ChipCounts.text = $"Chips : {GameManager.instance.chipCount}";
 
         // 카드팩 설명 변경
-        GameObject cardpack1 = GameObject.Find("cardpack1text");
-        GameObject cardpack2 = GameObject.Find("cardpack2text");
-        GameObject cardpack4 = GameObject.Find("cardpack4text");
-        GameObject[] cardpacklists = { cardpack1, cardpack2, cardpack4 };
-        for (int i = 0; i < cardpacklists.Length; i++)
+        Text[] cardtextlists = { cardpack1text, cardpack2text, cardpack4text };
+        for (int i = 0; i < cardtextlists.Length; i++)
         {
-            Text textobj = cardpacklists[i].GetComponent<Text>();
             int packCount = (i == 0) ? 1 : (i == 1) ? 2 : 4;
-            textobj.text = $"카드팩\n{packCount}개\n필요칩 : {GetPrice(packCount)}";
+            cardtextlists[i].text = $"카드팩\n{packCount}개\n필요칩 : {GetPrice(packCount)}";
         }
     }
     

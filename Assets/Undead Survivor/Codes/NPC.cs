@@ -1,49 +1,63 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class NPC : MonoBehaviour
 {
     public GameObject shopUI;
-    public bool isPlayerNear = false;
+    public GameObject npcKey; // G 키 안내 표시용 오브젝트
 
+    private bool isPlayerNear = false;
+    private bool isShopOpen = false;
 
     void Start()
     {
-        Transform npcKey = transform.Find("NPCKey");
-        npcKey.gameObject.SetActive(false);
+        // 시작 시 키 UI는 비활성화
+        if (npcKey != null)
+            npcKey.SetActive(false);
     }
 
     void Update()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (!player)
-            return;
-        Transform npcKey = transform.Find("NPCKey");
-        float distance = Vector2.Distance(transform.position, player.transform.position);
-        
-        if (distance < 2f)
-            isPlayerNear = true;
-        else
-            isPlayerNear = false;
-
-        npcKey.gameObject.SetActive(isPlayerNear);
-
+        // 플레이어가 근처에 있고 G를 눌렀을 때만 상호작용
         if (isPlayerNear && Input.GetKeyDown(KeyCode.G))
         {
             ToggleShop();
         }
-        
     }
-    
-    void ToggleShop()
+
+    public void ToggleShop()
     {
-        shopUI.SetActive(!shopUI.activeSelf);
-        Time.timeScale = shopUI.activeSelf ? 0f : 1f;
-        if(shopUI.activeSelf)
+        if (shopUI == null) return;
+
+        isShopOpen = !isShopOpen;
+        shopUI.SetActive(isShopOpen);
+
+        // Shop UI가 열리면 시간 정지, 닫으면 시간 재개
+        Time.timeScale = isShopOpen ? 0f : 1f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
         {
-            ShopUIManager.instance.UpdateUI();
+            isPlayerNear = true;
+            if (npcKey != null)
+                npcKey.SetActive(true); // "G" 키 안내 표시
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNear = false;
+
+            if (npcKey != null)
+                npcKey.SetActive(false);
+
+            if (shopUI != null)
+                shopUI.SetActive(false);
         }
     }
 }
