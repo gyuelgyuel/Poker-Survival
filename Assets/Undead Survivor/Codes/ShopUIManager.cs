@@ -103,7 +103,7 @@ public class ShopUIManager : MonoBehaviour
     {
         // 칩개수 변경
         if (ChipCounts)
-            ChipCounts.text = $"Chips : {GameManager.instance.chipCount}";
+            ChipCounts.text = $"Chips : {GameManager.instance.chip}";
 
         // 카드팩 설명 변경
         Text[] cardtextlists = { cardpack1text, cardpack2text, cardpack4text };

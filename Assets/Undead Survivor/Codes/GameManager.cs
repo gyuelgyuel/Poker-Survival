@@ -15,11 +15,11 @@ public class GameManager : MonoBehaviour
     public int playerId;
     public float health;
     public float maxHealth = 100;
-    public int level;
-    public int chipCount = 10000;
+    // public int level;
+    public int chip = 10000;
     public int kill;
-    public int exp;
-    public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    // public int exp;
+    // public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
     [Header("# Game Object")]
     public PoolManager pool;
     public Player player;
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
             GameVictory();
         }
     }
-
+    /*
     public void GetExp()
     {
         if (!isLive)
@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
             uiLevelUp.Show();
         }
     }
-
+    */
     public void Stop()
     {
         isLive = false;
@@ -139,9 +139,9 @@ public class GameManager : MonoBehaviour
 
     public bool SpendChip(int count)
     {
-        if (chipCount >= count)
+        if (chip >= count)
         {
-            chipCount -= count;
+            chip -= count;
             return true;
         }
         else
