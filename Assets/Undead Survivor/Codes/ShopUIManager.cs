@@ -45,6 +45,7 @@ public class ShopUIManager : MonoBehaviour
 
     void Start()
     {
+        UpdateUI();
         // 버튼 클릭 이벤트 연결
         pack1Button.onClick.AddListener(() => BuyPack(1));
         pack2Button.onClick.AddListener(() => BuyPack(2));
@@ -66,7 +67,7 @@ public class ShopUIManager : MonoBehaviour
             BuyPack(1);
         if (Input.GetKeyDown(KeyCode.Alpha2))
             BuyPack(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
             BuyPack(4);
 
     }

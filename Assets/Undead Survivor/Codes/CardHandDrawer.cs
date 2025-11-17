@@ -60,7 +60,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             int idx = DrawRandomCardNoDuplicate_FromPool();
             if (idx >= 0 && idx < frontImages.Length)
@@ -70,7 +70,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             BeginHand();
             InitBacks(frontImages.Length);
@@ -214,7 +214,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
         int maxHand = Mathf.Min(handSize, deck.Count);
         if (slotIndex >= maxHand)
         {
-            Debug.Log("손패가 가득 찼습니다. (N으로 새 핸드를 시작하세요)");
+            Debug.Log("손패가 가득 찼습니다. (R로 새 핸드를 시작하세요)");
             return -1;
         }
 

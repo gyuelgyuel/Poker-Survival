@@ -21,7 +21,7 @@ public class HUD : MonoBehaviour
         {
             case InfoType.Chip:
                 float curExp = GameManager.instance.chip;
-                myText.text = string.Format("Chip : {0:F0}", GameManager.instance.chip);
+                myText.text = string.Format("{0:F0}", GameManager.instance.chip);
                 break;
             case InfoType.Kill:
                 myText.text = string.Format("{0:F0}", GameManager.instance.kill);
