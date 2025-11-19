@@ -60,7 +60,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (GameManager.instance.isLive && Input.GetKeyDown(KeyCode.Space))
         {
             int idx = DrawRandomCardNoDuplicate_FromPool();
             if (idx >= 0 && idx < frontImages.Length)
@@ -70,7 +70,7 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (GameManager.instance.isLive && Input.GetKeyDown(KeyCode.R))
         {
             BeginHand();
             InitBacks(frontImages.Length);
