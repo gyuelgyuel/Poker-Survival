@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
+    public static NPC instance;
     public GameObject shopUI;
     public GameObject npcKey; // G 키 안내 표시용 오브젝트
 
     private bool isPlayerNear = false;
-    private bool isShopOpen = false;
+    public bool isShopOpen = false;
 
+    void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         // 시작 시 키 UI는 비활성화
@@ -25,8 +30,8 @@ public class NPC : MonoBehaviour
             OpenShop();
         }
 
-        // ESC키 → 열려 있을 때만 닫기
-        if (isShopOpen && Input.GetKeyDown(KeyCode.Escape))
+        // ESC키 → 열려 있을 때만 닫기, pack 개봉 중에는 shopUI 먼저 닫기 불가
+        if (isShopOpen && !ShopUIManager.instance.isOpenPack && Input.GetKeyDown(KeyCode.Escape))
         {
             CloseShop();
         }
@@ -39,7 +44,8 @@ public class NPC : MonoBehaviour
         isShopOpen = true;
         shopUI.SetActive(true);
 
-        Time.timeScale = 0f;
+        GameManager.instance.Stop();
+        //Time.timeScale = 0f;
     }
 
     public void CloseShop()
@@ -49,7 +55,8 @@ public class NPC : MonoBehaviour
         isShopOpen = false;
         shopUI.SetActive(false);
 
-        Time.timeScale = 1f;
+        GameManager.instance.Resume();
+        //Time.timeScale = 1f;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

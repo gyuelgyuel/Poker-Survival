@@ -13,22 +13,23 @@ public class ShopUIManager : MonoBehaviour
     public GameObject shopUI;
     public GameObject notEnoughChipPanel;
     public GameObject packOpenUI;
-    public Text ChipCounts, cardpack1text, cardpack2text,cardpack4text;
+    public Text ChipCounts, cardpack1text, cardpack2text,cardpack3text;
     private List<string> tempOptions = new List<string>() {"111","222","333","444","555","666","777","888","999"};
     private int optionAmount = 4;
     private int remainPack = 0;
     private int maxPack = 0;
     public List<string> selectedOptions;
+    public bool isOpenPack = false;
 
     [Header("Card Pack Buttons")]
     public Button pack1Button;
     public Button pack2Button;
-    public Button pack4Button;
+    public Button pack3Button;
 
     [Header("Card Pack Prices")]
     public int pack1Price = 100;
     public int pack2Price = 200;
-    public int pack4Price = 4000;
+    public int pack3Price = 4000;
 
     [Header("Pack Option Select Buttons")]
     public GameObject packOptionSelectButton1;
@@ -49,7 +50,7 @@ public class ShopUIManager : MonoBehaviour
         // 버튼 클릭 이벤트 연결
         pack1Button.onClick.AddListener(() => BuyPack(1));
         pack2Button.onClick.AddListener(() => BuyPack(2));
-        pack4Button.onClick.AddListener(() => BuyPack(4));
+        pack3Button.onClick.AddListener(() => BuyPack(4));
 
         packOptionSelectButtons = new GameObject[] { packOptionSelectButton1, packOptionSelectButton2, packOptionSelectButton3, packOptionSelectButton4 };
         foreach (var option in packOptionSelectButtons)
@@ -62,14 +63,28 @@ public class ShopUIManager : MonoBehaviour
 
     void Update()
     {
-        // 숫자키 입력 처리
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            BuyPack(1);
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-            BuyPack(2);
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-            BuyPack(4);
-
+        if (NPC.instance.isShopOpen && !isOpenPack)
+        {
+            // 숫자키 입력 처리
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                BuyPack(1);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                BuyPack(2);
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+                BuyPack(4);
+        }
+        
+        if (NPC.instance.isShopOpen && isOpenPack)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                SelectOption(packOptionSelectButton1);
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+                SelectOption(packOptionSelectButton2);
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+                SelectOption(packOptionSelectButton3);
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+                SelectOption(packOptionSelectButton4);
+        }
     }
     
     // 카드팩 구매 처리
@@ -95,7 +110,7 @@ public class ShopUIManager : MonoBehaviour
         {
             case 1: return pack1Price;
             case 2: return pack2Price;
-            case 4: return pack4Price;
+            case 4: return pack3Price;
             default: return 0;
         }
     }
@@ -107,7 +122,7 @@ public class ShopUIManager : MonoBehaviour
             ChipCounts.text = $"Chips : {GameManager.instance.chip}";
 
         // 카드팩 설명 변경
-        Text[] cardtextlists = { cardpack1text, cardpack2text, cardpack4text };
+        Text[] cardtextlists = { cardpack1text, cardpack2text, cardpack3text };
         for (int i = 0; i < cardtextlists.Length; i++)
         {
             int packCount = (i == 0) ? 1 : (i == 1) ? 2 : 4;
@@ -138,14 +153,17 @@ public class ShopUIManager : MonoBehaviour
     }
 
     private void PackOpen(int packCount) {
+        
         if (remainPack == 0) {
             packOpenUI.SetActive(false);
+            isOpenPack = false;
             shopUI.SetActive(true);
             return;
         }
         
         if (!packOpenUI.activeSelf) { 
-            packOpenUI.SetActive(true); 
+            packOpenUI.SetActive(true);
+            isOpenPack = true;
             shopUI.SetActive(false);
         }
         packOpenUI.transform.GetChild(0).GetComponent<Text>().text = $"카드팩 개봉 ({maxPack-remainPack+1}/{maxPack})";
