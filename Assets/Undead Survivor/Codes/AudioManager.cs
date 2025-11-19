@@ -1,15 +1,25 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
+
+    [Header("#AudioSource")]
+    public AudioMixer audioMixer;
+    [Header("#OptionSlider")]
+    public Slider masterSlider;
+    public Slider bgmSlider;
+    public Slider sfxSlider;
 
     [Header("#BGM")]
     public AudioClip bgmClip;
     public float bgmVolume;
     AudioSource bgmPlayer;
     AudioHighPassFilter bgmEffect;
+    public AudioMixerGroup bgmMixerGroup;
 
     [Header("#SFX")]
     public AudioClip[] sfxClips;
@@ -17,6 +27,7 @@ public class AudioManager : MonoBehaviour
     public int channels;
     AudioSource[] sfxPlayers;
     int channelIndex;
+    public AudioMixerGroup sfxMixerGroup;
 
     public enum Sfx { Dead, Hit, LevelUp=3, Lose, Melee, Range=7, Select, Win }
 
@@ -34,8 +45,9 @@ public class AudioManager : MonoBehaviour
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
         bgmPlayer.playOnAwake = false;
         bgmPlayer.loop = true;
-        bgmPlayer.volume = bgmVolume;
+        //bgmPlayer.volume = bgmVolume;
         bgmPlayer.clip = bgmClip;
+        bgmPlayer.outputAudioMixerGroup = bgmMixerGroup;
         bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
 
         // SFX players init
@@ -48,8 +60,8 @@ public class AudioManager : MonoBehaviour
             sfxPlayers[i] = sfxObject.AddComponent<AudioSource>();
             sfxPlayers[i].playOnAwake = false;
             sfxPlayers[i].bypassListenerEffects = true;
-            sfxPlayers[i].volume = sfxVolume;
-
+            //sfxPlayers[i].volume = sfxVolume;
+            sfxPlayers[i].outputAudioMixerGroup = sfxMixerGroup;
         }
 
     }
@@ -92,4 +104,19 @@ public class AudioManager : MonoBehaviour
             break;
         }
     }
+
+    public void SetBGMVolme()
+    {
+        audioMixer.SetFloat("BGM", Mathf.Log10(bgmSlider.value) * 20);
+    }
+
+    public void SetSFXVolme()
+    {
+        audioMixer.SetFloat("SFX", Mathf.Log10(sfxSlider.value) * 20);
+    }
+    public void SetMasterVolme()
+    {
+        audioMixer.SetFloat("Master", Mathf.Log10(masterSlider.value) * 20);
+    }
+
 }
