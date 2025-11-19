@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public float health;
     public float maxHealth = 100;
     // public int level;
-    public int chip = 10000;
+    public int chip = 0;
     public int kill;
     // public int exp;
     // public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
@@ -148,6 +148,17 @@ public class GameManager : MonoBehaviour
         {
             ShopUIManager.instance.ShowNotEnoughChips();
             return false;
+        }
+    }
+
+    public void GetChip(int amount)
+    {
+        chip += amount;
+
+        // 칩 증가 후 UI 업데이트
+        if (ShopUIManager.instance != null)
+        {
+            ShopUIManager.instance.UpdateUI();
         }
     }
 }

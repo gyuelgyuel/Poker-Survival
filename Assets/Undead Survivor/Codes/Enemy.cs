@@ -110,5 +110,16 @@ public class Enemy : MonoBehaviour
     void Dead()
     {
         gameObject.SetActive(false);
+        DropChip();
+    }
+
+    void DropChip()
+    {
+        int chipIndex = 3;
+
+        GameObject chip = GameManager.instance.pool.Get(chipIndex);
+
+        // 칩을 enemy 위치에 스폰
+        chip.transform.position = transform.position;
     }
 }

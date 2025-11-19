@@ -4419,6 +4419,7 @@ MonoBehaviour:
   - {fileID: 5253822213652820632, guid: 4d5da2a840c3bfc428468fb11c143e52, type: 3}
   - {fileID: 8674093480219619212, guid: 9c34a203de92f6c45830787b5a6f791e, type: 3}
   - {fileID: 6115170433540015866, guid: d879cfb0f82de2247a3e3bb3d73f4965, type: 3}
+  - {fileID: 6095779242520640975, guid: 284a10f060a6d23468871959404e753c, type: 3}
 --- !u!4 &641805643
 Transform:
   m_ObjectHideFlags: 0
@@ -29809,7 +29810,7 @@ MonoBehaviour:
   playerId: 0
   health: 0
   maxHealth: 100
-  chip: 10000
+  chip: 0
   kill: 0
   pool: {fileID: 641805642}
   player: {fileID: 792602870}
