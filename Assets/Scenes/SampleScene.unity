@@ -2815,7 +2815,7 @@ GameObject:
   - component: {fileID: 371149786}
   - component: {fileID: 371149785}
   m_Layer: 5
-  m_Name: cardpack4
+  m_Name: cardpack3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5755,6 +5755,7 @@ MonoBehaviour:
   - {fileID: 5253822213652820632, guid: 4d5da2a840c3bfc428468fb11c143e52, type: 3}
   - {fileID: 8674093480219619212, guid: 9c34a203de92f6c45830787b5a6f791e, type: 3}
   - {fileID: 6115170433540015866, guid: d879cfb0f82de2247a3e3bb3d73f4965, type: 3}
+  - {fileID: 6095779242520640975, guid: 284a10f060a6d23468871959404e753c, type: 3}
 --- !u!4 &641805643
 Transform:
   m_ObjectHideFlags: 0
@@ -6830,14 +6831,15 @@ MonoBehaviour:
   ChipCounts: {fileID: 1137987052}
   cardpack1text: {fileID: 1520146047}
   cardpack2text: {fileID: 2143042027}
-  cardpack4text: {fileID: 1289308551}
+  cardpack3text: {fileID: 1289308551}
   selectedOptions: []
+  isOpenPack: 0
   pack1Button: {fileID: 34859777}
   pack2Button: {fileID: 618352481}
-  pack4Button: {fileID: 371149785}
+  pack3Button: {fileID: 371149785}
   pack1Price: 100
   pack2Price: 200
-  pack4Price: 4000
+  pack3Price: 4000
   packOptionSelectButton1: {fileID: 556281426}
   packOptionSelectButton2: {fileID: 1885058949}
   packOptionSelectButton3: {fileID: 786127283}
@@ -8297,7 +8299,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopUI: {fileID: 626840315}
-  npcKey: {fileID: 0}
+  npcKey: {fileID: 1036912747}
+  isShopOpen: 0
 --- !u!1 &814714363
 GameObject:
   m_ObjectHideFlags: 0
@@ -13891,7 +13894,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -670361210, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+  m_Sprite: {fileID: -1569355150, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15346,7 +15349,7 @@ GameObject:
   - component: {fileID: 1188545861}
   - component: {fileID: 1188545860}
   m_Layer: 5
-  m_Name: key4
+  m_Name: key3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15391,7 +15394,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -534860179, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
+  m_Sprite: {fileID: -151394201, guid: 069a00c4a21d8654bbe27600f3ba7103, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20497,7 +20500,7 @@ GameObject:
   - component: {fileID: 1289308552}
   - component: {fileID: 1289308551}
   m_Layer: 5
-  m_Name: cardpack4text
+  m_Name: cardpack3text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20923,7 +20926,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -40, y: -7}
+  m_AnchoredPosition: {x: -24, y: -7}
   m_SizeDelta: {x: 8, y: 8}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1323929449
@@ -34494,13 +34497,12 @@ MonoBehaviour:
   playerId: 0
   health: 0
   maxHealth: 100
-  chip: 10000
+  chip: 0
   kill: 0
   pool: {fileID: 641805642}
   player: {fileID: 792602870}
   uiLevelUp: {fileID: 424286840}
   uiResult: {fileID: 827503642}
-  uiJoy: {fileID: 1769610055}
   enemyCleaner: {fileID: 1892568310}
 --- !u!1 &1892568310
 GameObject:
