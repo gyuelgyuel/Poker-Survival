@@ -62,19 +62,25 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
     {
         if (GameManager.instance.isLive && Input.GetKeyDown(KeyCode.Space))
         {
-            int idx = DrawRandomCardNoDuplicate_FromPool();
-            if (idx >= 0 && idx < frontImages.Length)
+            if (GameManager.instance.SpendChip(100))                    // 칩 소모 성공 할 경우에만 카드 뽑기
             {
-                frontImages[idx].sprite = slots[idx];               // 앞면 설정
-                StartCoroutine(FlipToFront3D(idx, flipDuration));   // ★ 3D 뒤집기
+                int idx = DrawRandomCardNoDuplicate_FromPool();
+                if (idx >= 0 && idx < frontImages.Length)
+                {
+                    frontImages[idx].sprite = slots[idx];               // 앞면 설정
+                    StartCoroutine(FlipToFront3D(idx, flipDuration));   // ★ 3D 뒤집기
+                }
             }
         }
 
         if (GameManager.instance.isLive && Input.GetKeyDown(KeyCode.R))
         {
-            BeginHand();
-            InitBacks(frontImages.Length);
-            WeaponSelectUIManager.instance.unsetAllCards();
+            if (GameManager.instance.SpendChip(100))                    // 칩 소모 성공 할 경우에만 카드 초기화
+            {
+                BeginHand();
+                InitBacks(frontImages.Length);
+                WeaponSelectUIManager.instance.unsetAllCards();
+            }
         }
     }
 
@@ -269,5 +275,11 @@ public class CardHandDrawer_AlphaCrossfadeFlip : MonoBehaviour
         front.alpha = 1f;
 
         isFlipping[slotIdx] = false;
+    }
+
+    public void resetHands()
+    {
+        BeginHand();
+        InitBacks(frontImages.Length);
     }
 }

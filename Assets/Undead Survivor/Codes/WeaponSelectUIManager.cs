@@ -9,6 +9,7 @@ public class WeaponSelectUIManager : MonoBehaviour
 {
     public static WeaponSelectUIManager instance;
     public GameObject selectUI;
+    public CardHandDrawer_AlphaCrossfadeFlip cardContainer;
 
     public Card[] cards = new Card[5];
 
@@ -30,12 +31,26 @@ public class WeaponSelectUIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             selectUI.SetActive(!selectUI.activeSelf);
-            Time.timeScale = selectUI.activeSelf ? 0f : 1f;
+            if (selectUI.activeSelf)
+            {
+                unclickAllCards();
+                GameManager.instance.Stop();
+            }
+            else
+            {
+                unclickAllCards();
+                GameManager.instance.Resume();
+            }
+
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            calcWeaponWithCheckedCard();
+            if (selectUI.activeSelf)
+            {
+                // 무기 계산, 손패 초기화, 게임 재개
+                calcWeaponWithCheckedCard();
+            }
         }
 
         // 숫자키 입력 처리
@@ -75,7 +90,17 @@ public class WeaponSelectUIManager : MonoBehaviour
         }
     }
 
-    private void calcWeaponWithCheckedCard()
+    public void unclickAllCards()
+    {
+        // selectUI의 card 변경
+        for (int i = 0; i < cards.Length; i++)
+        {
+            if (cards[i].isClicked)
+                cards[i].OnClickItem();
+        }
+    }
+
+    public void calcWeaponWithCheckedCard()
     {
         // 선택한 카드 확인
         List<CardData> clickedCardDatas = new List<CardData>();
@@ -103,6 +128,12 @@ public class WeaponSelectUIManager : MonoBehaviour
         {
             weapons[1].OnClickItem();
         }
-        
+
+        // 손패 초기화
+        cardContainer.resetHands();
+        unsetAllCards();
+        // 게임 재개
+        selectUI.SetActive(false);
+        GameManager.instance.Resume();
     }
 }

@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
         bgmPlayer.playOnAwake = false;
         bgmPlayer.loop = true;
-        //bgmPlayer.volume = bgmVolume;
+        bgmPlayer.volume = bgmVolume;
         bgmPlayer.clip = bgmClip;
         bgmPlayer.outputAudioMixerGroup = bgmMixerGroup;
         bgmEffect = Camera.main.GetComponent<AudioHighPassFilter>();
@@ -60,7 +60,7 @@ public class AudioManager : MonoBehaviour
             sfxPlayers[i] = sfxObject.AddComponent<AudioSource>();
             sfxPlayers[i].playOnAwake = false;
             sfxPlayers[i].bypassListenerEffects = true;
-            //sfxPlayers[i].volume = sfxVolume;
+            sfxPlayers[i].volume = sfxVolume;
             sfxPlayers[i].outputAudioMixerGroup = sfxMixerGroup;
         }
 

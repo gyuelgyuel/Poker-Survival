@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public Result uiResult;
     // public Transform uiJoy;
     public GameObject enemyCleaner;
+    public GameObject hud;
 
     void Awake()
     {
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Select);
         AudioManager.instance.PlayBgm(true);
+        hud.SetActive(true);
     }
 
     public void GameOver()

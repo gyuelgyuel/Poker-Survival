@@ -29,7 +29,11 @@ public class Option : MonoBehaviour
 
     public void OpenAndClose() {
         optionUI.SetActive(!optionUI.activeSelf);
-        Time.timeScale = optionUI.activeSelf ? 0f : 1f;
+        //Time.timeScale = optionUI.activeSelf ? 0f : 1f;
+        if (optionUI.activeSelf)
+            GameManager.instance.Stop();
+        else
+            GameManager.instance.Resume();
     }
 
     public void SwapPanel(int i) {
