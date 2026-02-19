@@ -109,6 +109,7 @@ public class Enemy : MonoBehaviour
 
     void Dead()
     {
+        Debug.Log("Dead called");
         gameObject.SetActive(false);
         DropChip();
     }

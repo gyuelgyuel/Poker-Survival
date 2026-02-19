@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: cfbe928772feac74b99bb21730c2f526
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6832655038856814040
+    second: brownrabbit_die_0
+  - first:
+      213: 8998025097329578738
+    second: brownrabbit_die_1
+  - first:
+      213: -2098973069451505005
+    second: brownrabbit_die_2
+  - first:
+      213: 4153613030297399525
+    second: brownrabbit_die_3
+  - first:
+      213: -1423646915558501971
+    second: brownrabbit_die_4
+  - first:
+      213: -1966029579619670113
+    second: brownrabbit_die_5
+  - first:
+      213: -2272858149101917727
+    second: brownrabbit_die_6
+  - first:
+      213: 8714066723241775031
+    second: brownrabbit_die_7
+  - first:
+      213: -2448294340043989742
+    second: brownrabbit_die_8
+  - first:
+      213: -2858551032586652109
+    second: brownrabbit_die_9
+  - first:
+      213: -6246815478142737838
+    second: brownrabbit_die_10
+  - first:
+      213: -1787596816289242394
+    second: brownrabbit_die_11
+  - first:
+      213: -6299836001520929736
+    second: brownrabbit_die_12
+  - first:
+      213: 6677435458509694402
+    second: brownrabbit_die_13
+  - first:
+      213: -5923867282519079452
+    second: brownrabbit_die_14
+  - first:
+      213: 3042678956136812594
+    second: brownrabbit_die_15
+  - first:
+      213: 3395185774327027675
+    second: brownrabbit_die_16
+  - first:
+      213: -7273101849541677813
+    second: brownrabbit_die_17
+  - first:
+      213: -8710956273562148218
+    second: brownrabbit_die_18
+  - first:
+      213: -9037760244452113237
+    second: brownrabbit_die_19
+  - first:
+      213: 6211133650168112737
+    second: brownrabbit_die_20
+  - first:
+      213: 1046875375155456546
+    second: brownrabbit_die_21
+  - first:
+      213: -947608459841778581
+    second: brownrabbit_die_22
+  - first:
+      213: -8348438398350127923
+    second: brownrabbit_die_23
+  - first:
+      213: -2619275104283103715
+    second: brownrabbit_die_24
+  - first:
+      213: 2941339848334776686
+    second: brownrabbit_die_25
+  - first:
+      213: -727957334623977357
+    second: brownrabbit_die_26
+  - first:
+      213: 8130682867788447676
+    second: brownrabbit_die_27
+  - first:
+      213: -2644609898432567057
+    second: brownrabbit_die_28
+  - first:
+      213: -2379612986586095108
+    second: brownrabbit_die_29
+  - first:
+      213: -77365154474308342
+    second: brownrabbit_die_30
+  - first:
+      213: 1130240957237598169
+    second: brownrabbit_die_31
+  - first:
+      213: -4099864885909054098
+    second: brownrabbit_die_32
+  - first:
+      213: -653858395236669662
+    second: brownrabbit_die_33
+  - first:
+      213: 2763189086980997383
+    second: brownrabbit_die_34
+  - first:
+      213: 5715578968293404702
+    second: brownrabbit_die_35
+  - first:
+      213: -1691029748658130261
+    second: brownrabbit_die_36
+  - first:
+      213: -2564127312529591696
+    second: brownrabbit_die_37
+  - first:
+      213: -830156263966124558
+    second: brownrabbit_die_38
+  - first:
+      213: 248531916810285980
+    second: brownrabbit_die_39
+  - first:
+      213: 7899871625440356618
+    second: brownrabbit_die_40
+  - first:
+      213: 1039777790607138217
+    second: brownrabbit_die_41
+  - first:
+      213: -577308823194601517
+    second: brownrabbit_die_42
+  - first:
+      213: 7245211006794985885
+    second: brownrabbit_die_43
+  - first:
+      213: 4317905282869512796
+    second: brownrabbit_die_44
+  - first:
+      213: 8469029686313283322
+    second: brownrabbit_die_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brownrabbit_die_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 919
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822282071788d21a0800000000000000
+      internalID: -6832655038856814040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownrabbit_die_1
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 0
+        width: 919
+        height: 877
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2116607286fdc70800000000000000
+      internalID: 8998025097329578738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownrabbit_die_2
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 0
+        width: 919
+        height: 877
+      alignment: 9
+      pivot: {x: 0.5335453, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3925b3a3d13fed2e0800000000000000
+      internalID: -2098973069451505005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab5bd2d7e25c7804e94d8b45083b9d29
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      brownrabbit_die_0: -6832655038856814040
+      brownrabbit_die_1: 8998025097329578738
+      brownrabbit_die_2: -2098973069451505005
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
