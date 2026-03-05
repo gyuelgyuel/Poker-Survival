@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: a45c2b2df722a41208c86ad348f4e393
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4597848909253255010
+    second: Alice Final Photoroom_0
+  - first:
+      213: 6073563518802093370
+    second: Alice Final Photoroom_1
+  - first:
+      213: -3220054790754133078
+    second: Alice Final Photoroom_2
+  - first:
+      213: 8104346747886838582
+    second: Alice Final Photoroom_3
+  - first:
+      213: 6602049370397319577
+    second: Alice Final Photoroom_4
+  - first:
+      213: 261935205120221402
+    second: Alice Final Photoroom_5
+  - first:
+      213: -5344015203357954646
+    second: Alice Final Photoroom_6
+  - first:
+      213: -8078776289952571736
+    second: Alice Final Photoroom_7
+  - first:
+      213: 6869159693013026360
+    second: Alice Final Photoroom_8
+  - first:
+      213: 7939557249619477263
+    second: Alice Final Photoroom_9
+  - first:
+      213: -6980875531855056262
+    second: Alice Final Photoroom_10
+  - first:
+      213: -4743450624714089028
+    second: Alice Final Photoroom_11
+  - first:
+      213: -6805238385791317445
+    second: Alice Final Photoroom_12
+  - first:
+      213: -3761976165302775428
+    second: Alice Final Photoroom_13
+  - first:
+      213: 3360707403432498570
+    second: Alice Final Photoroom_14
+  - first:
+      213: 897046009270625279
+    second: Alice Final Photoroom_15
+  - first:
+      213: 2571252049052205245
+    second: Alice Final Photoroom_16
+  - first:
+      213: 7746588334880390664
+    second: Alice Final Photoroom_17
+  - first:
+      213: 8541275844167369503
+    second: Alice Final Photoroom_18
+  - first:
+      213: 8096904851412073166
+    second: Alice Final Photoroom_19
+  - first:
+      213: -7351941565106874666
+    second: Alice Final Photoroom_20
+  - first:
+      213: -3610762688503204492
+    second: Alice Final Photoroom_21
+  - first:
+      213: -5711988761449320680
+    second: Alice Final Photoroom_22
+  - first:
+      213: 8390506979745679169
+    second: Alice Final Photoroom_23
+  - first:
+      213: 8565626723792764398
+    second: Alice Final Photoroom_24
+  - first:
+      213: 6314653685343100570
+    second: Alice Final Photoroom_25
+  - first:
+      213: -1576390395122724631
+    second: Alice Final Photoroom_26
+  - first:
+      213: 63467644836185621
+    second: Alice Final Photoroom_27
+  - first:
+      213: 2172708251809237183
+    second: Alice Final Photoroom_28
+  - first:
+      213: 7571160498499749587
+    second: Alice Final Photoroom_29
+  - first:
+      213: 8875334099048344003
+    second: Alice Final Photoroom_30
+  - first:
+      213: -4330865937564106426
+    second: Alice Final Photoroom_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Alice Final Photoroom_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e90ea0907c82130c0800000000000000
+      internalID: -4597848909253255010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3568fa57d1a94450800000000000000
+      internalID: 6073563518802093370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aab1ec77a311053d0800000000000000
+      internalID: -3220054790754133078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 493
+        width: 72
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6332364bd6c687070800000000000000
+      internalID: 8104346747886838582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_4
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 493
+        width: 72
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991af185ce03f9b50800000000000000
+      internalID: 6602049370397319577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad02c576ea492a300800000000000000
+      internalID: 261935205120221402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_6
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aadef818c7e36d5b0800000000000000
+      internalID: -5344015203357954646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_7
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae578974cb62ef80800000000000000
+      internalID: -8078776289952571736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_8
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 352
+        width: 70
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836097fa858245f50800000000000000
+      internalID: 6869159693013026360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 352
+        width: 69
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f034271c049fe2e60800000000000000
+      internalID: 7939557249619477263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_10
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 353
+        width: 70
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a723096a0b2fe1f90800000000000000
+      internalID: -6980875531855056262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 71
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbddf48e9c0eb2eb0800000000000000
+      internalID: -4743450624714089028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_12
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 352
+        width: 70
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a4e0b6ebfee81a0800000000000000
+      internalID: -6805238385791317445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 352
+        width: 69
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7154a50c96cacbc0800000000000000
+      internalID: -3761976165302775428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_14
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 352
+        width: 70
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a859e9fd391a3ae20800000000000000
+      internalID: 3360707403432498570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 353
+        width: 70
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff3e1c9b792f27c00800000000000000
+      internalID: 897046009270625279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_16
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 174
+        width: 69
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db080c39d1ceea320800000000000000
+      internalID: 2571252049052205245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_17
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 175
+        width: 63
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80efab12c09618b60800000000000000
+      internalID: 7746588334880390664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_18
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 174
+        width: 63
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f13883c6025b88670800000000000000
+      internalID: 8541275844167369503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_19
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 174
+        width: 67
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecabd88201cfd5070800000000000000
+      internalID: 8096904851412073166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_20
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 174
+        width: 69
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d6106a4918a8f990800000000000000
+      internalID: -7351941565106874666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_21
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 175
+        width: 67
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4753887277ef3edc0800000000000000
+      internalID: -3610762688503204492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_22
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 174
+        width: 62
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f2ac02c70fab0b0800000000000000
+      internalID: -5711988761449320680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_23
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 174
+        width: 69
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1474d2da4a1117470800000000000000
+      internalID: 8390506979745679169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_24
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 22
+        width: 65
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eedb2466f183fd670800000000000000
+      internalID: 8565626723792764398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_25
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 22
+        width: 63
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9e9c72021822a750800000000000000
+      internalID: 6314653685343100570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_26
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 22
+        width: 63
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e05f57a9498f1ae0800000000000000
+      internalID: -1576390395122724631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_27
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 22
+        width: 67
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51601399c7b71e000800000000000000
+      internalID: 63467644836185621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_28
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 22
+        width: 68
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb846adb4a2072e10800000000000000
+      internalID: 2172708251809237183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_29
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 22
+        width: 63
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d60c821c5a221960800000000000000
+      internalID: 7571160498499749587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_30
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 22
+        width: 67
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c920bce6558b2b70800000000000000
+      internalID: 8875334099048344003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alice Final Photoroom_31
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 22
+        width: 62
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64107ad206ca5e3c0800000000000000
+      internalID: -4330865937564106426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Alice Final Photoroom_0: -4597848909253255010
+      Alice Final Photoroom_1: 6073563518802093370
+      Alice Final Photoroom_10: -6980875531855056262
+      Alice Final Photoroom_11: -4743450624714089028
+      Alice Final Photoroom_12: -6805238385791317445
+      Alice Final Photoroom_13: -3761976165302775428
+      Alice Final Photoroom_14: 3360707403432498570
+      Alice Final Photoroom_15: 897046009270625279
+      Alice Final Photoroom_16: 2571252049052205245
+      Alice Final Photoroom_17: 7746588334880390664
+      Alice Final Photoroom_18: 8541275844167369503
+      Alice Final Photoroom_19: 8096904851412073166
+      Alice Final Photoroom_2: -3220054790754133078
+      Alice Final Photoroom_20: -7351941565106874666
+      Alice Final Photoroom_21: -3610762688503204492
+      Alice Final Photoroom_22: -5711988761449320680
+      Alice Final Photoroom_23: 8390506979745679169
+      Alice Final Photoroom_24: 8565626723792764398
+      Alice Final Photoroom_25: 6314653685343100570
+      Alice Final Photoroom_26: -1576390395122724631
+      Alice Final Photoroom_27: 63467644836185621
+      Alice Final Photoroom_28: 2172708251809237183
+      Alice Final Photoroom_29: 7571160498499749587
+      Alice Final Photoroom_3: 8104346747886838582
+      Alice Final Photoroom_30: 8875334099048344003
+      Alice Final Photoroom_31: -4330865937564106426
+      Alice Final Photoroom_4: 6602049370397319577
+      Alice Final Photoroom_5: 261935205120221402
+      Alice Final Photoroom_6: -5344015203357954646
+      Alice Final Photoroom_7: -8078776289952571736
+      Alice Final Photoroom_8: 6869159693013026360
+      Alice Final Photoroom_9: 7939557249619477263
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 795f77d8101624c3eadfc5709b9feda9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1663552048298767748
+    second: alice_add_stand_dead_0
+  - first:
+      213: 7405223554219378705
+    second: alice_add_stand_dead_1
+  - first:
+      213: 5349924572844058418
+    second: alice_add_stand_dead_2
+  - first:
+      213: -8571657864048955481
+    second: alice_add_stand_dead_3
+  - first:
+      213: -8938825738873783569
+    second: alice_add_stand_dead_4
+  - first:
+      213: 3729202215564438268
+    second: alice_add_stand_dead_5
+  - first:
+      213: -7649090204626489667
+    second: alice_add_stand_dead_6
+  - first:
+      213: 947103172948164721
+    second: alice_add_stand_dead_7
+  - first:
+      213: -8459237328585261096
+    second: alice_add_stand_dead_8
+  - first:
+      213: -913584836083657936
+    second: alice_add_stand_dead_9
+  - first:
+      213: 6590460423819887473
+    second: alice_add_stand_dead_10
+  - first:
+      213: -4891806834467089774
+    second: alice_add_stand_dead_11
+  - first:
+      213: 4678572016357581716
+    second: alice_add_stand_dead_12
+  - first:
+      213: -892450475246014423
+    second: alice_add_stand_dead_13
+  - first:
+      213: -76227519627058616
+    second: alice_add_stand_dead_14
+  - first:
+      213: -6118466044984283817
+    second: alice_add_stand_dead_15
+  - first:
+      213: 5669537516171884397
+    second: alice_add_stand_dead_16
+  - first:
+      213: 6714866354165543361
+    second: alice_add_stand_dead_17
+  - first:
+      213: -8419932601071313119
+    second: alice_add_stand_dead_18
+  - first:
+      213: -3766813557565241634
+    second: alice_add_stand_dead_19
+  - first:
+      213: 7825418491805392669
+    second: alice_add_stand_dead_20
+  - first:
+      213: -991293898807665392
+    second: alice_add_stand_dead_21
+  - first:
+      213: -1779726532390126424
+    second: alice_add_stand_dead_22
+  - first:
+      213: 415791192657652685
+    second: alice_add_stand_dead_23
+  - first:
+      213: 688302443901240006
+    second: alice_add_stand_dead_24
+  - first:
+      213: 5036381867248914930
+    second: alice_add_stand_dead_25
+  - first:
+      213: -4045558783601905122
+    second: alice_add_stand_dead_26
+  - first:
+      213: 816435298973105459
+    second: alice_add_stand_dead_27
+  - first:
+      213: -8016289663615196871
+    second: alice_add_stand_dead_28
+  - first:
+      213: -8018106600301355242
+    second: alice_add_stand_dead_29
+  - first:
+      213: 4519825395878488039
+    second: alice_add_stand_dead_30
+  - first:
+      213: -6413531260413360192
+    second: alice_add_stand_dead_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: alice_add_stand_dead_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 485b83826cf161710800000000000000
+      internalID: 1663552048298767748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 494
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1180a978693a4c660800000000000000
+      internalID: 7405223554219378705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237e08bcd00ce3a40800000000000000
+      internalID: 5349924572844058418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_3
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 493
+        width: 72
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7afad25569a5b0980800000000000000
+      internalID: -8571657864048955481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_4
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 493
+        width: 72
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fea3f45b959e2f380800000000000000
+      internalID: -8938825738873783569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfa615a28a9c0c330800000000000000
+      internalID: 3729202215564438268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_6
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe615a4cf8f8d590800000000000000
+      internalID: -7649090204626489667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_7
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 493
+        width: 71
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 170883d5159c42d00800000000000000
+      internalID: 947103172948164721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_8
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 354
+        width: 70
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df73f6f770ca9a80800000000000000
+      internalID: -8459237328585261096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_9
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 352
+        width: 70
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033dc059e6b4253f0800000000000000
+      internalID: -913584836083657936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_10
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 352
+        width: 70
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1730e0476d4067b50800000000000000
+      internalID: 6590460423819887473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_11
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 352
+        width: 71
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292d2c91a9fcc1cb0800000000000000
+      internalID: -4891806834467089774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_12
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 351
+        width: 71
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 493a313f570ade040800000000000000
+      internalID: 4678572016357581716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_13
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 352
+        width: 69
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920355b65016d93f0800000000000000
+      internalID: -892450475246014423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_14
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 352
+        width: 70
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842258a897f21fef0800000000000000
+      internalID: -76227519627058616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 353
+        width: 70
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d2c629c87d61ba0800000000000000
+      internalID: -6118466044984283817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_16
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 177
+        width: 72
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67fc2c155e3eae40800000000000000
+      internalID: 5669537516171884397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_17
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 176
+        width: 71
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1724a4f5fff2d50800000000000000
+      internalID: 6714866354165543361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_18
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 176
+        width: 63
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12fd968f8e3662b80800000000000000
+      internalID: -8419932601071313119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_19
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 176
+        width: 63
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6c23ed60799bbc0800000000000000
+      internalID: -3766813557565241634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_20
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 176
+        width: 72
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f55de48a8799c60800000000000000
+      internalID: 7825418491805392669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_21
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 176
+        width: 73
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d9e8d73773e32f0800000000000000
+      internalID: -991293898807665392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_22
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 176
+        width: 70
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac7c8fe5242d47e0800000000000000
+      internalID: -1779726532390126424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_23
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 176
+        width: 73
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb681303ef25c500800000000000000
+      internalID: 415791192657652685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 139
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c244ca0d675d8900800000000000000
+      internalID: 688302443901240006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_25
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 22
+        width: 71
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f11796df92d4e540800000000000000
+      internalID: 5036381867248914930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_26
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 21
+        width: 88
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12727978b94bd7c0800000000000000
+      internalID: -4045558783601905122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_27
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 22
+        width: 110
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33db169249f845b00800000000000000
+      internalID: 816435298973105459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_28
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 21
+        width: 115
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931a497e50b60c090800000000000000
+      internalID: -8016289663615196871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_29
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 21
+        width: 128
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f92dd5786f9b090800000000000000
+      internalID: -8018106600301355242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_30
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 19
+        width: 130
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e760202045a9be30800000000000000
+      internalID: 4519825395878488039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: alice_add_stand_dead_31
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 19
+        width: 131
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7c23b8c4f8ef6a0800000000000000
+      internalID: -6413531260413360192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      alice_add_stand_dead_0: 1663552048298767748
+      alice_add_stand_dead_1: 7405223554219378705
+      alice_add_stand_dead_10: 6590460423819887473
+      alice_add_stand_dead_11: -4891806834467089774
+      alice_add_stand_dead_12: 4678572016357581716
+      alice_add_stand_dead_13: -892450475246014423
+      alice_add_stand_dead_14: -76227519627058616
+      alice_add_stand_dead_15: -6118466044984283817
+      alice_add_stand_dead_16: 5669537516171884397
+      alice_add_stand_dead_17: 6714866354165543361
+      alice_add_stand_dead_18: -8419932601071313119
+      alice_add_stand_dead_19: -3766813557565241634
+      alice_add_stand_dead_2: 5349924572844058418
+      alice_add_stand_dead_20: 7825418491805392669
+      alice_add_stand_dead_21: -991293898807665392
+      alice_add_stand_dead_22: -1779726532390126424
+      alice_add_stand_dead_23: 415791192657652685
+      alice_add_stand_dead_24: 688302443901240006
+      alice_add_stand_dead_25: 5036381867248914930
+      alice_add_stand_dead_26: -4045558783601905122
+      alice_add_stand_dead_27: 816435298973105459
+      alice_add_stand_dead_28: -8016289663615196871
+      alice_add_stand_dead_29: -8018106600301355242
+      alice_add_stand_dead_3: -8571657864048955481
+      alice_add_stand_dead_30: 4519825395878488039
+      alice_add_stand_dead_31: -6413531260413360192
+      alice_add_stand_dead_4: -8938825738873783569
+      alice_add_stand_dead_5: 3729202215564438268
+      alice_add_stand_dead_6: -7649090204626489667
+      alice_add_stand_dead_7: 947103172948164721
+      alice_add_stand_dead_8: -8459237328585261096
+      alice_add_stand_dead_9: -913584836083657936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
