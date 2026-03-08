@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 82c7b28b9d1cf0e479fbf93a77c1e483
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2216458396302440510
+    second: ST1_Tile_4_0
+  - first:
+      213: -1536081506744833125
+    second: ST1_Tile_4_1
+  - first:
+      213: 7893737427537873215
+    second: ST1_Tile_4_2
+  - first:
+      213: 6218141361331484973
+    second: ST1_Tile_4_3
+  - first:
+      213: -4926387665072367070
+    second: ST1_Tile_4_4
+  - first:
+      213: 3626814973861222765
+    second: ST1_Tile_4_5
+  - first:
+      213: 7300361975006985404
+    second: ST1_Tile_4_6
+  - first:
+      213: 2748410554354539783
+    second: ST1_Tile_4_7
+  - first:
+      213: -268229470472951917
+    second: ST1_Tile_4_8
+  - first:
+      213: 9199962570323856753
+    second: ST1_Tile_4_9
+  - first:
+      213: 8782469418268284608
+    second: ST1_Tile_4_10
+  - first:
+      213: -3866214686397307999
+    second: ST1_Tile_4_11
+  - first:
+      213: -2655911476780405400
+    second: ST1_Tile_4_12
+  - first:
+      213: -2414405863571114091
+    second: ST1_Tile_4_13
+  - first:
+      213: 5346788033545255008
+    second: ST1_Tile_4_14
+  - first:
+      213: -2129527764389298521
+    second: ST1_Tile_4_15
+  - first:
+      213: -9106300326324109928
+    second: ST1_Tile_4_16
+  - first:
+      213: 403285308718350327
+    second: ST1_Tile_4_17
+  - first:
+      213: -1992180117050224220
+    second: ST1_Tile_4_18
+  - first:
+      213: -3444000484163624876
+    second: ST1_Tile_4_19
+  - first:
+      213: 5549120169839112224
+    second: ST1_Tile_4_20
+  - first:
+      213: 4689277361159247145
+    second: ST1_Tile_4_21
+  - first:
+      213: -5802430198894013441
+    second: ST1_Tile_4_22
+  - first:
+      213: 8219861294905391384
+    second: ST1_Tile_4_23
+  - first:
+      213: -1375164411831257175
+    second: ST1_Tile_4_24
+  - first:
+      213: -1393171261940199099
+    second: ST1_Tile_4_25
+  - first:
+      213: -9212994960103275185
+    second: ST1_Tile_4_26
+  - first:
+      213: -5803956791486878472
+    second: ST1_Tile_4_27
+  - first:
+      213: 1228633096023736882
+    second: ST1_Tile_4_28
+  - first:
+      213: -2235056915494382786
+    second: ST1_Tile_4_29
+  - first:
+      213: -8442365665275596832
+    second: ST1_Tile_4_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ST1_Tile_4_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 569
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38f90b0b2172ce10800000000000000
+      internalID: 2216458396302440510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 506
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b6d64120ebeaae0800000000000000
+      internalID: -1536081506744833125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 569
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39c9961e503c8d60800000000000000
+      internalID: 7893737427537873215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 506
+        width: 79
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29b35d7f964b4650800000000000000
+      internalID: 6218141361331484973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_4
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 569
+        width: 80
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ade7d0584f1abb0800000000000000
+      internalID: -4926387665072367070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 510
+        width: 80
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d69d017c009055230800000000000000
+      internalID: 3626814973861222765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_6
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 569
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc7f0c8988105560800000000000000
+      internalID: 7300361975006985404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_7
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 510
+        width: 79
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d9c3566d0542620800000000000000
+      internalID: 2748410554354539783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 449
+        width: 79
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3972b2eb7be074cf0800000000000000
+      internalID: -268229470472951917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_9
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 449
+        width: 79
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d0b07d635dcaf70800000000000000
+      internalID: 9199962570323856753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_10
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 455
+        width: 80
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6dc96876991e970800000000000000
+      internalID: 8782469418268284608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_11
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 397
+        width: 80
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3e3ef0a32785ac0800000000000000
+      internalID: -3866214686397307999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_12
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 455
+        width: 79
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86dee9f559e442bd0800000000000000
+      internalID: -2655911476780405400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_13
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 397
+        width: 79
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597393eb8ae4e7ed0800000000000000
+      internalID: -2414405863571114091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 279
+        width: 79
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06836c4536b933a40800000000000000
+      internalID: 5346788033545255008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_15
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 281
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ae7e30f7c56272e0800000000000000
+      internalID: -2129527764389298521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_16
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 335
+        width: 80
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d7d67b91cef9180800000000000000
+      internalID: -9106300326324109928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_17
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 217
+        width: 80
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff7a410ad1c89500800000000000000
+      internalID: 403285308718350327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_18
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 335
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a110a21dba5a54e0800000000000000
+      internalID: -1992180117050224220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_19
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 217
+        width: 79
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45067278ec37430d0800000000000000
+      internalID: -3444000484163624876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 217
+        width: 79
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020373bd46f620d40800000000000000
+      internalID: 5549120169839112224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_21
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 155
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9259d254ae8a31140800000000000000
+      internalID: 4689277361159247145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_22
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 217
+        width: 79
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff35ce80a70a97fa0800000000000000
+      internalID: -5802430198894013441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 155
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81971d90c40d21270800000000000000
+      internalID: 8219861294905391384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_24
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 155
+        width: 80
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7f90dd04f6aece0800000000000000
+      internalID: -1375164411831257175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_25
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 155
+        width: 79
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54195cc5e167aace0800000000000000
+      internalID: -1393171261940199099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_26
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 88
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f45849575edd42080800000000000000
+      internalID: -9212994960103275185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_27
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 17
+        width: 79
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fc65bf7c04347fa0800000000000000
+      internalID: -5803956791486878472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_28
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 88
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23288cf8a4bfc0110800000000000000
+      internalID: 1228633096023736882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_29
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 88
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e335d23c39b7bf0e0800000000000000
+      internalID: -2235056915494382786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ST1_Tile_4_30
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 88
+        width: 79
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ef2b413821b6da80800000000000000
+      internalID: -8442365665275596832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4c713aad0c9981245ae82ec98bb8a220
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ST1_Tile_4_0: 2216458396302440510
+      ST1_Tile_4_1: -1536081506744833125
+      ST1_Tile_4_10: 8782469418268284608
+      ST1_Tile_4_11: -3866214686397307999
+      ST1_Tile_4_12: -2655911476780405400
+      ST1_Tile_4_13: -2414405863571114091
+      ST1_Tile_4_14: 5346788033545255008
+      ST1_Tile_4_15: -2129527764389298521
+      ST1_Tile_4_16: -9106300326324109928
+      ST1_Tile_4_17: 403285308718350327
+      ST1_Tile_4_18: -1992180117050224220
+      ST1_Tile_4_19: -3444000484163624876
+      ST1_Tile_4_2: 7893737427537873215
+      ST1_Tile_4_20: 5549120169839112224
+      ST1_Tile_4_21: 4689277361159247145
+      ST1_Tile_4_22: -5802430198894013441
+      ST1_Tile_4_23: 8219861294905391384
+      ST1_Tile_4_24: -1375164411831257175
+      ST1_Tile_4_25: -1393171261940199099
+      ST1_Tile_4_26: -9212994960103275185
+      ST1_Tile_4_27: -5803956791486878472
+      ST1_Tile_4_28: 1228633096023736882
+      ST1_Tile_4_29: -2235056915494382786
+      ST1_Tile_4_3: 6218141361331484973
+      ST1_Tile_4_30: -8442365665275596832
+      ST1_Tile_4_4: -4926387665072367070
+      ST1_Tile_4_5: 3626814973861222765
+      ST1_Tile_4_6: 7300361975006985404
+      ST1_Tile_4_7: 2748410554354539783
+      ST1_Tile_4_8: -268229470472951917
+      ST1_Tile_4_9: 9199962570323856753
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
